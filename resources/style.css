@@ -20,15 +20,17 @@ h1 {
   -o-animation: fadein 2s; /* Opera < 12.1 */
 }
 
-p {
+p, #Tale {
     color: #002b15;
     text-shadow: 2px 8px 6px rgba(0,0,0,0.2),0px -5px 35px rgba(255,255,255,0.3);
     text-align: center;
     font-weight: bold;
+    animation: fadein 2s;
+    -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 2s; /* Firefox < 16 */
+    -ms-animation: fadein 2s; /* Internet Explorer */
+    -o-animation: fadein 2s; /* Opera < 12.1 */
   }
-
-.spoiler { filter: blur(3px); }
-.spoiler:hover { background-color:transparent; filter: none; }
 
 div {
   text-align: center;
@@ -48,29 +50,33 @@ button {
   border: 2px solid rgb(28, 110, 164); 
   -webkit-transition-duration: 0.4s;
     transition-duration: 0.4s;
-    animation: fadein 5s;
+    animation: fadein 10s;
     -webkit-animation: fadein 10s; /* Safari, Chrome and Opera > 12.1 */
     -moz-animation: fadein 10s; /* Firefox < 16 */
     -ms-animation: fadein 10s; /* Internet Explorer */
     -o-animation: fadein 10s; /* Opera < 12.1 */
 }  
 
+button:hover {
+  background: #1C6EA4;
+  cursor:url(cursor.gif), auto;
+}
+
+
 @keyframes fadein {
   from { opacity: 0; }
   to   { opacity: 1; }
 }
 
-  button:hover {
-   background: #1C6EA4;
-   cursor:url(cursor.gif), auto;
-  }
-  
   /* button:enabled {
    background: #144E75; }
 
    a, a:hover, a:active, a:visited { cursor: url(cursor.gif), auto; } */
-  
+   
+/* .spoiler { filter: blur(3px); }
+.spoiler:hover { background-color:transparent; filter: none; } */
+
 #music {
     display: none; 
-    autoplay: true;
+    /* autoplay: true; */
  }
