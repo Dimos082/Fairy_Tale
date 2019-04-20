@@ -6,23 +6,25 @@
   <meta charset="Windows-1251">
   <link rel="stylesheet" href="resources/style.css">
   <!--Link to sweetalert2 library-->
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8.8.5/dist/sweetalert2.all.min.js"></script>
-  <!--Link to foreign font here-->
-  <link href="https://fonts.googleapis.com/css?family=Spectral+SC" rel="stylesheet"> 
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
 </head>
 
 <body>
   <div>
-  <h1>The <spoiler>story</spoiler> begins...</h1>
-     <script type="text/javascript" src="resources/tale.js"></script>
+  <h1>The story begins...</h1>
+     <script type="text/javascript" src="resources/tale.js">
+     
+     </script>
      <!-- Button that activates tale.js file -->
-       <button onclick="TellTale()">Tell me a story</button>
+      <button id="start" onclick="TellTale()">Tell me a story</button>
          <p id="Tale"></p>  <!-- Result from tale.js will be put here as innerHTML-->
         </div>
         <div>
-  <!-- <span class="spoiler"> Spoiler text </span> -->
+  <span class="spoiler"> <button id="start" onclick="enableAutoplay()" type="button">Music</button> </span>
 </div>
 <!-- Music from youtube video (invisible). Music by Danny Elfman OST Fable, (c) belongs to Microsoft -->
-<iframe src="https://www.youtube.com/embed/8sME-VxUQQA?autoplay=1" autoplay=true, id="music"></iframe>
+<iframe src="https://www.youtube.com/embed/8sME-VxUQQA?autoplay=1" autoplay=false, id="music"></iframe>
+
+
 </body>
 </html>
