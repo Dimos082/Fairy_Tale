@@ -1,18 +1,44 @@
+@import url('https://fonts.googleapis.com/css?family=Tangerine');
+@import url('https://fonts.googleapis.com/css?family=Spectral+SC');
+
 body {
-  background-color: #D0E4F5;
-  background-image: url("background.jpg");
+  /* background-color: #D0E4F5; */
+  /* background-image: url("background.jpg"); */
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: 50% 50%;
-  font-family: 'Spectral SC', serif;
+  font-family: 'Tangerine', serif;
   cursor:url(cursor.gif), none;
-  }
+}
 
 h1 {
-  font-family: 'Spectral SC', serif;
-  color: #006633;
+  font-family: 'Tangerine', serif;
+  color: #002b15;
   text-align: center;
   text-shadow: 2px 8px 6px rgba(0,0,0,0.2),0px -5px 35px rgba(255,255,255,0.3);
+  animation: fadein 5s;
+  -webkit-animation: fadein 5s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 5s; /* Firefox < 16 */
+  -ms-animation: fadein 5s; /* Internet Explorer */
+  -o-animation: fadein 5s; /* Opera < 12.1 */
+}
+h4 {  
+  font-family: 'Tangerine';
+  color: #002b15;
+  text-align: center;
+  text-shadow: 2px 8px 6px rgba(0,0,0,0.2),0px -5px 35px rgba(255,255,255,0.3);
+  animation: fadein 100s;
+  -webkit-animation: fadein 100s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 100s; /* Firefox < 16 */
+  -ms-animation: fadein 100s; /* Internet Explorer */
+  -o-animation: fadein 100s; /* Opera < 12.1 */}
+
+p, #Tale {
+  color: #002b15;
+  font-size: 27px;
+  text-shadow: 2px 8px 6px rgba(0,0,0,0.2),0px -5px 35px rgba(255,255,255,0.3);
+  text-align: center;
+  font-weight: bold;
   animation: fadein 2s;
   -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
   -moz-animation: fadein 2s; /* Firefox < 16 */
@@ -20,23 +46,30 @@ h1 {
   -o-animation: fadein 2s; /* Opera < 12.1 */
 }
 
-p, #Tale {
-    color: #002b15;
-    text-shadow: 2px 8px 6px rgba(0,0,0,0.2),0px -5px 35px rgba(255,255,255,0.3);
-    text-align: center;
-    font-weight: bold;
-    animation: fadein 2s;
-    -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
-    -moz-animation: fadein 2s; /* Firefox < 16 */
-    -ms-animation: fadein 2s; /* Internet Explorer */
-    -o-animation: fadein 2s; /* Opera < 12.1 */
-  }
-
 div {
   text-align: center;
+  display: grid;
+  justify-items: center;
+  grid-gap: 1px 2px;
+  /* width: 600px; */
+  /* height: 1000px; */
 }
 
 button {
+  color: rgb(255, 255, 255); font-size: 15px; line-height: 15px; padding: 7px; border-radius: 3px; 
+  font-family: Spectral SC, serif; 
+  font-weight: normal; 
+  text-decoration: none; 
+  font-style: normal; 
+  font-variant-ligatures: normal; 
+  font-variant-caps: normal; 
+  text-transform: none; 
+  background-image: linear-gradient(to right, rgb(28, 110, 164) 0%, rgb(35, 136, 203) 50%, rgb(20, 78, 117) 100%); 
+  box-shadow: rgb(0, 0, 0) 5px 5px 15px 5px; 
+  border: 2px solid rgb(28, 110, 164); 
+}  
+
+#start {
   color: rgb(255, 255, 255); font-size: 15px; line-height: 15px; padding: 7px; border-radius: 3px; 
   font-family: Spectral SC, serif; 
   font-weight: normal; 
@@ -57,26 +90,30 @@ button {
     -o-animation: fadein 10s; /* Opera < 12.1 */
 }  
 
-button:hover {
-  background: #1C6EA4;
-  cursor:url(cursor.gif), auto;
+button:hover {background: #1C6EA4; cursor:url(cursor.gif), auto;
 }
 
+button:enabled {background: #144E75;
+}
+
+a, a:hover, a:active, a:visited {
+  cursor: url(cursor.gif), auto;
+}
 
 @keyframes fadein {
-  from { opacity: 0; }
-  to   { opacity: 1; }
+  from { opacity: 0;}
+  to   { opacity: 1;}
 }
 
-  /* button:enabled {
-   background: #144E75; }
-
-   a, a:hover, a:active, a:visited { cursor: url(cursor.gif), auto; } */
+@keyframes deblur {
+  from { filter: blur(3px); }
+  to   { filter: blur(0px); }
+}
    
-/* .spoiler { filter: blur(3px); }
-.spoiler:hover { background-color:transparent; filter: none; } */
+.spoiler { filter: blur(3px); }
+.spoiler:hover { background-color:transparent; filter: none; animation: deblur 0.5s;}  
 
 #music {
-    display: none; 
-    /* autoplay: true; */
- }
+  display: none; 
+  /* autoplay: true; */
+}
