@@ -3,12 +3,13 @@
 
 body {
   /* background-color: #D0E4F5; */
-  /* background-image: url("background.jpg"); */
-  background-repeat: no-repeat;
+  background-image: url("background0.jpg");
+  background-repeat:no-repeat;
   background-attachment: fixed;
-  background-position: 50% 50%;
+  background-position: 50% -10%;
   font-family: 'Tangerine', serif;
   cursor:url(cursor.gif), none;
+  cursor:url(hand.png), pointer, text;
 }
 
 h1 {
@@ -24,6 +25,7 @@ h1 {
 }
 h4 {  
   font-family: 'Tangerine';
+  width: 855px;
   color: #002b15;
   text-align: center;
   text-shadow: 2px 8px 6px rgba(0,0,0,0.2),0px -5px 35px rgba(255,255,255,0.3);
@@ -34,6 +36,8 @@ h4 {
   -o-animation: fadein 100s; /* Opera < 12.1 */}
 
 p, #Tale {
+  width: 855px;
+  /* height: 300px; */
   color: #002b15;
   font-size: 27px;
   text-shadow: 2px 8px 6px rgba(0,0,0,0.2),0px -5px 35px rgba(255,255,255,0.3);
@@ -50,9 +54,12 @@ div {
   text-align: center;
   display: grid;
   justify-items: center;
-  grid-gap: 1px 2px;
-  /* width: 600px; */
-  /* height: 1000px; */
+  /* grid-gap: 1px 2px; */
+  /* padding: 150px; */
+  /* position: 100% 100%; */
+  /* width: 860px; */
+  /* height: 100px; */
+  cursor:url(hand.png), pointer, text;
 }
 
 button {
@@ -90,10 +97,13 @@ button {
     -o-animation: fadein 10s; /* Opera < 12.1 */
 }  
 
-button:hover {background: #1C6EA4; cursor:url(cursor.gif), auto;
+button:hover {
+  background: #1C6EA4; 
+  cursor:url(cursor.gif), auto;
 }
 
-button:enabled {background: #144E75;
+button:enabled {
+  background: #144E75;
 }
 
 a, a:hover, a:active, a:visited {
@@ -106,14 +116,33 @@ a, a:hover, a:active, a:visited {
 }
 
 @keyframes deblur {
-  from { filter: blur(3px); }
+  from { filter: blur(10px); }
   to   { filter: blur(0px); }
 }
+
+@keyframes blur {
+  from { filter: blur(0px); }
+  to   { filter: blur(10px); }
+}
    
-.spoiler { filter: blur(3px); }
-.spoiler:hover { background-color:transparent; filter: none; animation: deblur 0.5s;}  
+.spoiler { filter: blur(10px);
+  animation: blur 0.5s; 
+  -webkit-animation: blur 0.5s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: blur 0.5s; /* Firefox < 16 */
+  -ms-animation: blur 0.5s; /* Internet Explorer */
+  -o-animation: blur 0.5s; /* Opera < 12.1 */
+}
+.spoiler:hover { background-color:transparent; 
+  filter: none; 
+  cursor:url(cursor.gif), auto;
+  animation: deblur 0.5s; 
+  -webkit-animation: deblur 0.5s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: deblur 0.5s; /* Firefox < 16 */
+  -ms-animation: deblur 0.5s; /* Internet Explorer */
+  -o-animation: deblur 0.5s; /* Opera < 12.1 */
+}  
 
 #music {
-  display: none; 
-  /* autoplay: true; */
+  /* display: none;  */
+  /* autoplay: false; */
 }

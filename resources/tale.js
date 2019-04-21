@@ -1,7 +1,3 @@
-let music = document.getElementById("music");
-function enableAutoplay() { 
-    autoplay=true;
-}
 // The sweetalert version of TellTale function created with 'sweetalert2' library:
 
 function TellTale() {
@@ -10,18 +6,18 @@ function TellTale() {
         confirmButtonText: 'Forwards &rarr;',
         cancelButtonText: 'Stop it!',
         showCancelButton: true,
-        // buttonsStyling: false,
+        buttonsStyling: false,
         // showCloseButton: true,
         inputValidator: (value) => {
             if (!value) {
               return 'Please fill in to continue your quest'
               // Easter egg with Vegeta
-            } else if (value>8999) {
+            } else if (value>9000) {
                 return Swal.fire({
-                    imageUrl: 'https://media1.tenor.com/images/5d3022e7d8f6b0e36b86170b676c601c/tenor.gif?itemid=4474083',
+                    imageUrl: 'https://i.imgur.com/psA9jHo.gif?noredirect',
                     imageWidth: 500,
                     imageHeight: 261,
-                    imageAlt: 'Custom image',
+                    imageAlt: 'ITS OVER 9000!',
                     animation: true
                   })
               }},
@@ -32,19 +28,19 @@ function TellTale() {
      
   backdrop: `
     rgba(0,0,0,0)
-    url(resources/wizard.gif)
+    url(resources/wizard0.gif)
     bottom
     no-repeat
   `,
       }).queue([
         {title: 'How do people call you, Oh Noble Knight?'}, //result.value[0]
-        {title: 'How old is our hero?', 
-        type: 'question',
+        {title: 'How old is our hero?',
         input: 'range',
         inputAttributes: {
           min: 0,
           max: 9001,
-          step: 1}},   //result.value[1]
+          step: 1},
+          inputValue: 25},   //result.value[1]
         {title: 'What is the name of kingdom you sworn to protect?'}, //result.value[2]
         {title: 'What is the name of disgusting villain?'}, //result.value[3]
         {title: 'Tell me the place where that mean character lives'}, //result.value[4]
