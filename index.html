@@ -12,19 +12,15 @@
 <body>
   <div>
   <h1>The story begins...</h1>
-     <script type="text/javascript" src="resources/tale.js">
-     
-     </script>
+     <script type="text/javascript" src="resources/tale.js"></script>
      <!-- Button that activates tale.js file -->
       <button id="start" onclick="TellTale()">Tell me a story</button>
          <p id="Tale"></p>  <!-- Result from tale.js will be put here as innerHTML-->
         </div>
         <div>
-  <span class="spoiler"> <button id="start" onclick="enableAutoplay()" type="button">Music</button> </span>
+          <!-- Music by Danny Elfman and Russell Shaw OST Fable, (c) belongs to Microsoft -->
+  <span class="spoiler"><audio src="http://66.90.93.122/ost/fable-original-soundtrack/knivfmac/02.%20Oakvale.mp3" loop="true" controls id="music">
+    <p>If you are reading this, it is because your browser does not support the audio element.</p> </audio></button> </span>
 </div>
-<!-- Music from youtube video (invisible). Music by Danny Elfman OST Fable, (c) belongs to Microsoft -->
-<iframe src="https://www.youtube.com/embed/8sME-VxUQQA?autoplay=1" autoplay=false, id="music"></iframe>
-
-
 </body>
 </html>
