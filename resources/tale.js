@@ -44,10 +44,16 @@ function TellTale() {
         {title: 'What is the name of disgusting villain?'}, //result.value[3]
         {title: 'Tell me the place where that mean character lives'}, //result.value[4]
         {title: 'Tell me a name of a wiseman'}, //result.value[5]
-        {title: 'A name of an elegant weapon'}, //result.value[6]
-        {title: 'How many days you fought your enemies?'}, //result.value[7]
-        {title: 'What did the villain right before his death?'}, //result.value[8]
-        {title: 'Which part of bad guy you chopped off?'}, //result.value[9]
+        {title: 'A name of the most elegant weapon'}, //result.value[6]
+        {title: 'How many days needed to fought all enemies?',
+        input: 'range',
+        inputAttributes: {
+          min: 0,
+          max: 1000,
+          step: 1},
+          inputValue: 0}, //result.value[7]
+        {title: 'What was the last thing villain did?'}, //result.value[8]
+        {title: 'What is the villian\'s weakest point?'}, //result.value[9]
       ]).then(result => 
             document.getElementById("Tale").innerHTML = "<p>Read this with respect and dignity:</p> <p>Once upon a time, in a democratic constitutional kingdom of " 
             + result.value[2] + " - lived a champion, great protector of human rights, freedoms and amendments, noble Sir " 
