@@ -5,7 +5,7 @@ body {
   /* background-color: #D0E4F5; */
   background-image: url("background0.jpg");
   background-repeat:no-repeat;
-  background-attachment: fixed;
+  /* background-attachment: fixed; */
   background-position: 50% -10%;
   font-family: 'Tangerine', serif;
   cursor:url(cursor.gif), none;
@@ -36,7 +36,7 @@ h4 {
   -o-animation: fadein 100s; /* Opera < 12.1 */}
 
 p, #Tale {
-  width: 855px;
+  width: 848px;
   /* height: 300px; */
   color: #002b15;
   font-size: 27px;
@@ -116,7 +116,8 @@ a, a:hover, a:active, a:visited {
 }
 
 @keyframes deblur {
-  from { filter: blur(10px); }
+  from { filter: blur(10px); 
+}
   to   { filter: blur(0px); }
 }
 
@@ -144,5 +145,4 @@ a, a:hover, a:active, a:visited {
 
 #music {
   /* display: none;  */
-  /* autoplay: false; */
 }
