@@ -1,5 +1,4 @@
 // The sweetalert version of TellTale function created with 'sweetalert2' library:
-
 function TellTale() {
     Swal.mixin({
         input: 'text',
