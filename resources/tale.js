@@ -2,7 +2,7 @@
 Swal.fire({
   position: 'bottom',
   showConfirmButton: false,
-  timer: 6000,
+  timer: 6500,
   title: 'Welcome, stranger! You can turn the music here. It will accompany you on your journey.',
   background: '#fff url(resources/background.jpg)',
   backdrop: `
@@ -90,7 +90,7 @@ function TellTale() {
             + result.value[0] + " the " 
             + result.value[3] + "slayer and the Great Devastator of " 
             + result.value[4] + ". <h4>...Here our story ends.</h4>" 
-            + "<h4>I hope you enjoyed. You can copy-paste your tale in comments. Also leave your suggestions in comment section. Thank you and have a good one!</h4>"
+            + "<h4>I hope you enjoyed. You can share your own tale <a href='http://facebook.com/dmitry.monchares' target='_top'>with me</a> . Your suggestions would be greatly appreciated. Thank you and have a good one!</h4>"
           )}
 
 // The JS alert version of TellTale function

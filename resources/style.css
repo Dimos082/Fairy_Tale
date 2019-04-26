@@ -20,19 +20,19 @@ h1 {
   text-shadow: 2px 8px 6px rgba(0,0,0,0.2),0px -5px 35px rgba(255,255,255,0.3);
   
   animation: fadein 14s;
-  -webkit-animation: fadein 14s; Safari, Chrome and Opera > 12.1
+  -webkit-animation: fadein 14s; 
 }
 
 h4 {  
-  margin: 5px;
+  margin: 15px;
   font-family: 'Tangerine';
   color: #002b15;
   text-align: center;
   text-shadow: 2px 8px 6px rgba(0,0,0,0.2),0px -5px 35px rgba(255,255,255,0.3);
-  animation: endtext 60s;
-  -webkit-animation: endtext 60s; /* Safari, Chrome and Opera > 12.1 */
-  -moz-animation: endtext 60s; /* Firefox < 16 */
-  -ms-animation: endtext 60s; /* Internet Explorer */
+  animation: endtext 55s;
+  -webkit-animation: endtext 55s;
+  -moz-animation: endtext 55s; 
+  -ms-animation: endtext 55s;
 }
 
 p, #Tale {
