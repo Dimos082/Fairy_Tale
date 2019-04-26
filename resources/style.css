@@ -46,6 +46,7 @@ p, #Tale {
   text-shadow: 2px 8px 6px rgba(0,0,0,0.2),0px -5px 35px rgba(255,255,255,0.3);
   text-align: center;
   font-weight: bold;
+  line-height: 24pt;
   animation: fadein2 2.5s;
   -webkit-animation: fadein2 2.5s; /* Safari, Chrome and Opera > 12.1 */
   -moz-animation: fadein2 2.5s; /* Firefox < 16 */
