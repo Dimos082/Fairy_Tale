@@ -33,7 +33,8 @@ function TellTale() {
                     imageWidth: 500,
                     imageHeight: 261,
                     imageAlt: 'ITS OVER 9000!',
-                    animation: true
+                    animation: true,
+                    confirmButtonText: 'OK, I shall not use more than 9000 again'
                   })
               }},
         width: '700px',
