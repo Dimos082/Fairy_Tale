@@ -1,15 +1,16 @@
 @import url('https://fonts.googleapis.com/css?family=Tangerine');
 @import url('https://fonts.googleapis.com/css?family=Spectral+SC');
 
-body, html {
-  background-color: white;
+body{
+  /* background-color: white; */
   background-image: url("background0.jpg");
   background-repeat:no-repeat;
-  /* background-attachment: fixed; */
-  background-position: 50% 0%;
+  background-attachment: fixed;
+  background-position: 50% 0;
   font-family: 'Tangerine', serif;
   cursor:url(cursor.gif), none;
   /* cursor:url(hand.png), none; */
+
 }
 
 h1 {
@@ -17,11 +18,9 @@ h1 {
   color: #002b15;
   text-align: center;
   text-shadow: 2px 8px 6px rgba(0,0,0,0.2),0px -5px 35px rgba(255,255,255,0.3);
-  animation: fadein 5s;
-  -webkit-animation: fadein 5s; /* Safari, Chrome and Opera > 12.1 */
-  -moz-animation: fadein 5s; /* Firefox < 16 */
-  -ms-animation: fadein 5s; /* Internet Explorer */
-  -o-animation: fadein 5s; /* Opera < 12.1 */
+  
+  animation: fadein 14s;
+  -webkit-animation: fadein 14s; Safari, Chrome and Opera > 12.1
 }
 
 h4 {  
@@ -30,12 +29,10 @@ h4 {
   color: #002b15;
   text-align: center;
   text-shadow: 2px 8px 6px rgba(0,0,0,0.2),0px -5px 35px rgba(255,255,255,0.3);
-  animation: fadein 10s;
-  -webkit-animation: fadein 10s; /* Safari, Chrome and Opera > 12.1 */
-  -moz-animation: fadein 10s; /* Firefox < 16 */
-  -ms-animation: fadein 10s; /* Internet Explorer */
-  -o-animation: fadein 10s; /* Opera < 12.1 */
-  /* animation-delay: 10s; */
+  animation: endtext 60s;
+  -webkit-animation: endtext 60s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: endtext 60s; /* Firefox < 16 */
+  -ms-animation: endtext 60s; /* Internet Explorer */
 }
 
 p, #Tale {
@@ -49,11 +46,10 @@ p, #Tale {
   text-shadow: 2px 8px 6px rgba(0,0,0,0.2),0px -5px 35px rgba(255,255,255,0.3);
   text-align: center;
   font-weight: bold;
-  animation: fadein 2s;
-  -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
-  -moz-animation: fadein 2s; /* Firefox < 16 */
-  -ms-animation: fadein 2s; /* Internet Explorer */
-  -o-animation: fadein 2s; /* Opera < 12.1 */
+  animation: fadein2 2.5s;
+  -webkit-animation: fadein2 2.5s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein2 2.5s; /* Firefox < 16 */
+  -ms-animation: fadein2 2.5s; /* Internet Explorer */
 }
 
 div {
@@ -90,11 +86,10 @@ button {
   border: 2px solid rgb(28, 110, 164); 
   -webkit-transition-duration: 0.4s;
     transition-duration: 0.4s;
-    animation: fadein 10s;
-    -webkit-animation: fadein 10s; /* Safari, Chrome and Opera > 12.1 */
-    -moz-animation: fadein 10s; /* Firefox < 16 */
-    -ms-animation: fadein 10s; /* Internet Explorer */
-    -o-animation: fadein 10s; /* Opera < 12.1 */
+    animation: fadein 15s;
+    -webkit-animation: fadein 15s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 15s; /* Firefox < 16 */
+    -ms-animation: fadein 15s; /* Internet Explorer */
 }  
 
 button:hover {
@@ -110,20 +105,36 @@ a, a:hover, a:active, a:visited {
   cursor: url(hand.png), auto;
 }
 
+@keyframes endtext {
+  from { color: #f2e8d9;
+    text-shadow: none;
+  opacity: 0}
+  70% {color: #f2e8d9;
+    text-shadow: none;
+    opacity: 0 }  
+  to   { color: #002b15}
+}
+
 @keyframes fadein {
   from { opacity: 0;}
+  50% {opacity: 0;}
   to   { opacity: 1;}
+}
+
+@keyframes fadein2 {
+  from { opacity: 0;}
+  to   { opacity: 1;}
+}
+
+@keyframes blur {
+  from { filter: blur(0px); }
+  to   { filter: blur(5px); }
 }
 
 @keyframes deblur {
   from { filter: blur(5px); 
 }
   to   { filter: blur(0px); }
-}
-
-@keyframes blur {
-  from { filter: blur(0px); }
-  to   { filter: blur(5px); }
 }
    
 .spoiler {
@@ -136,7 +147,6 @@ a, a:hover, a:active, a:visited {
   -webkit-animation: blur 0.5s; /* Safari, Chrome and Opera > 12.1 */
   -moz-animation: blur 0.5s; /* Firefox < 16 */
   -ms-animation: blur 0.5s; /* Internet Explorer */
-  -o-animation: blur 0.5s; /* Opera < 12.1 */
 }
 
 .spoiler:hover { background-color:transparent; 
@@ -145,11 +155,11 @@ a, a:hover, a:active, a:visited {
   -webkit-animation: deblur 0.5s; /* Safari, Chrome and Opera > 12.1 */
   -moz-animation: deblur 0.5s; /* Firefox < 16 */
   -ms-animation: deblur 0.5s; /* Internet Explorer */
-  -o-animation: deblur 0.5s; /* Opera < 12.1 */
 } 
 
 #music {
   display: block;
   height: 35px;
   width: 220px;
+  animation: fadein 5s;
 }
