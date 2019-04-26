@@ -3,7 +3,7 @@ Swal.fire({
   position: 'bottom',
   showConfirmButton: false,
   timer: 6500,
-  title: 'Welcome, stranger! You can turn the music here. It will accompany you on your journey.',
+  title: 'Welcome, stranger! You can turn the music down here, in the bottom. It will accompany you on your journey.',
   background: '#fff url(resources/background.jpg)',
   backdrop: `
     rgba(0,0,0,0.4)
