@@ -1,15 +1,31 @@
-// The sweetalert version of TellTale function created with 'sweetalert2' library:
+// Welcoming alert suggesting user to turn the music on
+Swal.fire({
+  position: 'bottom',
+  showConfirmButton: false,
+  timer: 6000,
+  title: 'Welcome, stranger! You can turn the music here. It will accompany you on your journey.',
+  background: '#fff url(resources/background.jpg)',
+  backdrop: `
+    rgba(0,0,0,0.4)
+    url("resources/stranger.gif")
+    bottom left
+    no-repeat
+  `
+})
+
+// The sweetalert version of TellTale function created with 'sweetalert2' library
 function TellTale() {
     Swal.mixin({
         input: 'text',
         confirmButtonText: 'Forwards &rarr;',
         cancelButtonText: 'Stop it!',
         showCancelButton: true,
+        allowOutsideClick: false,
         buttonsStyling: false,
         // showCloseButton: true,
         inputValidator: (value) => {
             if (!value) {
-              return 'Please fill in to continue your quest'
+              return 'Please fill to continue your quest'
               // Easter egg with Vegeta
             } else if (value>9000) {
                 return Swal.fire({
@@ -24,11 +40,10 @@ function TellTale() {
         progressStepsDistance: '1 px',
         progressSteps: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'],
         background: '#fff url(resources/background.jpg)',
-     
   backdrop: `
-    rgba(0,0,0,0)
-    url(resources/wizard0.gif)
-    bottom
+    rgba(0,0,0,0.4)
+    url("resources/wizard.gif")
+    center bottom
     no-repeat
   `,
       }).queue([
@@ -49,7 +64,7 @@ function TellTale() {
         input: 'range',
         inputAttributes: {
           min: 0,
-          max: 1000,
+          max: 666,
           step: 1},
           inputValue: 0}, //result.value[7]
         {title: 'What was the last thing villain did?'}, //result.value[8]
@@ -75,10 +90,10 @@ function TellTale() {
             + result.value[0] + " the " 
             + result.value[3] + "slayer and the Great Devastator of " 
             + result.value[4] + ". <h4>...Here our story ends.</h4>" 
-            + "<h4>I hope you enjoyed. You can also copy-paste your tale in comments. Also leave your suggestions in comment section. Thank you and have a good one!</h4>"
+            + "<h4>I hope you enjoyed. You can copy-paste your tale in comments. Also leave your suggestions in comment section. Thank you and have a good one!</h4>"
           )}
 
-// The JS alert version of TellTale function:
+// The JS alert version of TellTale function
 
 // function TellTale() {
 // let KnightName = prompt("How do people call you, Oh Noble Knight?");
