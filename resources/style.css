@@ -19,25 +19,26 @@ html{
 }
 
 h1 {
+  margin: 10px;
   font-family: 'Tangerine', serif;
   color: #002b15;
   text-align: center;
   text-shadow: 2px 8px 6px rgba(0,0,0,0.2),0px -5px 35px rgba(255,255,255,0.3);
-  
   animation: fadein 14s;
   -webkit-animation: fadein 14s; 
 }
 
 h4 {  
-  margin: 15px;
+  margin: 10px;
   font-family: 'Tangerine';
   color: #002b15;
   text-align: center;
+  line-height: 21pt;
   text-shadow: 2px 8px 6px rgba(0,0,0,0.2),0px -5px 35px rgba(255,255,255,0.3);
-  animation: endtext 55s;
-  -webkit-animation: endtext 55s;
-  -moz-animation: endtext 55s; 
-  -ms-animation: endtext 55s;
+  animation: endtext 50s;
+  -webkit-animation: endtext 50s;
+  -moz-animation: endtext 50s; 
+  -ms-animation: endtext 50s;
 }
 
 p, #Tale {
