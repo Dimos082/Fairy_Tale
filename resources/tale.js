@@ -26,16 +26,17 @@ function TellTale() {
         inputValidator: (value) => {
             if (!value) {
               return 'Please fill to continue your quest'
-              // Easter egg with Vegeta
-            } else if (value>9000) {
+              //an easter egg when user input exceeds 9000
+            } else if (value>9000) {  
                 return Swal.fire({
                     imageUrl: 'https://i.imgur.com/psA9jHo.gif?noredirect',
                     imageWidth: 500,
                     imageHeight: 261,
                     imageAlt: 'ITS OVER 9000!',
                     animation: true,
-                    confirmButtonText: 'OK, I shall not use more than 9000 again'
-                  })
+                    confirmButtonText: 'OK, I shall try not to write more than 9000 again'
+                    //promise saves the current value and continues the function execution
+                  }).then(result =>TellTale())
               }},
         width: '700px',
         progressStepsDistance: '1 px',
