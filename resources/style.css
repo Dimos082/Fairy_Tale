@@ -14,6 +14,10 @@ body{
   /* cursor:url(hand.png), none; */
 }
 
+html{
+  cursor:url(cursor.gif), none;
+}
+
 h1 {
   font-family: 'Tangerine', serif;
   color: #002b15;
