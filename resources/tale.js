@@ -25,7 +25,9 @@ function TellTale() {
         // showCloseButton: true,
         inputValidator: (value) => {
             if (!value) {
-              return 'Please fill to continue your quest'
+              return 'Please fill this scroll to continue your quest'
+            } else if (value.length > 18) {
+              return 'I\'m afraid this is a bit long for our story'
               //an easter egg when user input exceeds 9000
             } else if (value>9000) {  
                 return Swal.fire({
@@ -80,7 +82,7 @@ function TellTale() {
             + result.value[3] + " brought terror upon all " 
             + result.value[2] + " residents, devastated their villages and robbed caravans. It was the time for benevolent " 
             + result.value[0] + " to get into a long and dangerous journey to the most terrifying place in the world, the infamous " 
-            + result.value[4] + " where beast were dwelling.</p> <p>On his way to glory our hero visited ancient grove and met an old wise " 
+            + result.value[4] + " where beast were dwelling. On his way to glory our hero visited ancient grove and met an old wise " 
             + result.value[5] + ", who commended an ultimate weapon in our hero\'s hands, the legendary " 
             + result.value[6] + ". A tedious fight lasted for " 
             + result.value[7] + " days, and our brave " 
@@ -91,8 +93,8 @@ function TellTale() {
             + result.value[2] + " has grown strong and flourished. And our champion was honorable named Sir " 
             + result.value[0] + " the " 
             + result.value[3] + "slayer and the Great Devastator of " 
-            + result.value[4] + ". <h4>...Here our story ends.</h4>" 
-            + "<h4>I hope you enjoyed. You can share your own tale <a href='http://facebook.com/dmitry.monchares' target='_top'>with me</a> . Your suggestions would be greatly appreciated. Thank you and have a good one!</h4>"
+            + result.value[4] + ".</p> <p>...Here our story ends.</p>" 
+            + "<h4>I hope you enjoyed. You can share your own tale <a href='http://facebook.com/dmitry.monchares' target='_top'>with me</a>. Thank you and have a good one!</h4>"
           )}
 
 // The JS alert version of TellTale function
