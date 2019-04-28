@@ -18,6 +18,12 @@ html{
   cursor:url(cursor.gif), none;
 }
 
+#zoomIn:active { 
+  zoom: 1.5; 
+  -moz-transform: scale(1.5); 
+  -moz-transform-origin: 0 0;
+} 
+
 h1 {
   margin: 10px;
   font-family: 'Tangerine', serif;
@@ -35,14 +41,14 @@ h4 {
   text-align: center;
   line-height: 21pt;
   text-shadow: 2px 8px 6px rgba(0,0,0,0.2),0px -5px 35px rgba(255,255,255,0.3);
-  animation: endtext 50s;
-  -webkit-animation: endtext 50s;
-  -moz-animation: endtext 50s; 
-  -ms-animation: endtext 50s;
+  animation: endtext 40s;
+  -webkit-animation: endtext 40s;
+  -moz-animation: endtext 40s; 
+  -ms-animation: endtext 40s;
 }
 
 p, #Tale {
-  width: 825px;
+  width: 824px;
   margin-left: 5px;
   margin-right: 5px;
   margin-top: 5px;
@@ -74,9 +80,11 @@ button {
   font-variant-ligatures: normal; 
   font-variant-caps: normal; 
   text-transform: none; 
-  background-image: linear-gradient(to right, rgb(28, 110, 164) 0%, rgb(35, 136, 203) 50%, rgb(20, 78, 117) 100%); 
+  background-image: linear-gradient(to right, rgb(28, 110, 164) 0%, rgb(35, 136, 203) 50%, rgb(20, 78, 117) 100%);
   box-shadow: rgb(0, 0, 0) 5px 5px 15px 5px; 
   border: 2px solid rgb(28, 110, 164); 
+  -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
 }  
 
 #start {
@@ -99,14 +107,15 @@ button {
     -ms-animation: fadein 15s; /* Internet Explorer */
 }  
 
-button:hover {
+#Start,button:hover {
   background: #1C6EA4; 
   cursor:url(hand.png), auto;
+  transform: scale(1.1)
 }
 
-button:enabled {
+/* #start,button:enabled {
   background: #144E75;
-}
+} */
 
 a, a:hover, a:active, a:visited {
   cursor: url(hand.png), auto;
