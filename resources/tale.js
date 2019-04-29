@@ -13,6 +13,15 @@ Swal.fire({
   `
 })
 
+//Defining a toast message for using it later on in easter eggs
+const Toast = Swal.mixin({
+  toast: true,
+  position: 'center',
+  showConfirmButton: false,
+  buttonsStyling: false,
+  timer: 4000,
+});
+
 // The sweetalert version of TellTale function created with 'sweetalert2' library
 function TellTale() {
     Swal.mixin({
@@ -39,6 +48,21 @@ function TellTale() {
                     confirmButtonText: 'OK, I shall try not to write more than 9000 again'
                     //promise saves the current value and continues the function execution
                   }).then(result =>TellTale())
+              } else if (value.match(/(Vader|Yoda|Skywalker|vader|yoda|skywalker)/)) {  
+                return Toast.fire({
+                  type: 'success',
+                  title: 'Achievement unlocked: MAY THE FORCE BE WITH YOU!'
+                }).then(result =>TellTale())
+              } else if (value.match(/(Snow|Lannister|Eddard|Targaryen|snow|lannister|eddard|targaryen)/)) {  
+                return Toast.fire({
+                  type: 'success',
+                  title: 'Achievement unlocked: WINTER IS COMMING!'
+                }).then(result =>TellTale())
+              } else if (value.match(/(Naruto|Kamina|Saitama|Erlic|Luffy|naruto|kamina|saitama|erlic|luffy)/)) {  
+                return Toast.fire({
+                  type: 'success',
+                  title: 'Achievement unlocked: 月に代わって！'
+                }).then(result =>TellTale())
               }},
         width: '700px',
         progressStepsDistance: '1 px',
