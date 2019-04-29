@@ -24,6 +24,11 @@ html{
   -moz-transform-origin: 0 0;
 } 
 
+
+#swal2-title {
+  font-family: Spectral SC, serif; 
+} /* Sweetalert2 ID */
+
 h1 {
   margin: 10px;
   font-family: 'Tangerine', serif;
