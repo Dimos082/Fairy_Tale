@@ -36,13 +36,17 @@ function TellTale() {
             if (!value) {
               return 'Please fill this scroll to continue your quest'
             } else if (value.length > 18) {
-              return 'I\'m afraid this is a bit long for our story'
+              return 'I\'m afraid it is a bit long for our story'
+              //an easter egg when user input exceeds 9000
+            } else if (value.match(/(@|#|%|&|~)/)) {
+              return 'I\'m afraid I don\'t quite understand this language'
               //an easter egg when user input exceeds 9000
             } else if (value>9000) {  
                 return Swal.fire({
                     imageUrl: 'https://i.imgur.com/psA9jHo.gif?noredirect',
                     imageWidth: 500,
                     imageHeight: 261,
+                    buttonsStyling: false,
                     imageAlt: 'ITS OVER 9000!',
                     animation: true,
                     confirmButtonText: 'OK, I shall try not to write more than 9000 again'
@@ -53,10 +57,10 @@ function TellTale() {
                     imageUrl: 'https://66.media.tumblr.com/79f04015f8c2d505bc4f2270ba3febc9/tumblr_p9r0q0icYm1u4gq67o5_r1_500.gif',
                     imageWidth: 600,
                     imageHeight: 200,
+                    buttonsStyling: false,
                     imageAlt: 'THIS IS SPARTA!',
                     animation: true,
                     confirmButtonText: 'AAAAAAAAAGGHHHHHHHHH!!!'
-                    //promise saves the current value and continues the function execution
                   }).then(result =>TellTale())
             } else if (value.match(/(Vader|Yoda|Skywalker|vader|yoda|skywalker)/)) {  
                 return Toast.fire({
@@ -140,6 +144,8 @@ function TellTale() {
             + result.value[4] + ".</p> <p>...Here our story ends.</p>" 
             + "<h4>I hope you enjoyed. You can share your own tale <a href='http://facebook.com/dmitry.monchares' target='_top'>with me</a>. Thank you and have a good one!</h4>"
           )}
+
+
 
 // The JS alert version of TellTale function
 
