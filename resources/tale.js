@@ -48,20 +48,40 @@ function TellTale() {
                     confirmButtonText: 'OK, I shall try not to write more than 9000 again'
                     //promise saves the current value and continues the function execution
                   }).then(result =>TellTale())
-              } else if (value.match(/(Vader|Yoda|Skywalker|vader|yoda|skywalker)/)) {  
+            } else if (value == 300) {  
+                return Swal.fire({
+                    imageUrl: 'https://66.media.tumblr.com/79f04015f8c2d505bc4f2270ba3febc9/tumblr_p9r0q0icYm1u4gq67o5_r1_500.gif',
+                    imageWidth: 600,
+                    imageHeight: 200,
+                    imageAlt: 'THIS IS SPARTA!',
+                    animation: true,
+                    confirmButtonText: 'AAAAAAAAAGGHHHHHHHHH!!!'
+                    //promise saves the current value and continues the function execution
+                  }).then(result =>TellTale())
+            } else if (value.match(/(Vader|Yoda|Skywalker|vader|yoda|skywalker)/)) {  
                 return Toast.fire({
                   type: 'success',
                   title: 'Achievement unlocked: MAY THE FORCE BE WITH YOU!'
                 }).then(result =>TellTale())
-              } else if (value.match(/(Snow|Lannister|Eddard|Targaryen|snow|lannister|eddard|targaryen)/)) {  
+            } else if (value.match(/(Snow|Lannister|Eddard|Targaryen|snow|lannister|eddard|targaryen)/)) {  
                 return Toast.fire({
                   type: 'success',
                   title: 'Achievement unlocked: WINTER IS COMMING!'
                 }).then(result =>TellTale())
-              } else if (value.match(/(Naruto|Kamina|Saitama|Erlic|Luffy|naruto|kamina|saitama|erlic|luffy)/)) {  
+            } else if (value.match(/(Naruto|Kamina|Saitama|Erlic|Luffy|naruto|kamina|saitama|erlic|luffy)/)) {  
                 return Toast.fire({
                   type: 'success',
                   title: 'Achievement unlocked: 月に代わって！'
+                }).then(result =>TellTale())
+            } else if (value.match(/(Sauron|Gandalf|Legolas|Gollum|sauron|gandalf|legolas|Frodo|frodo|Aragorn|aragorn)/)) {  
+                return Toast.fire({
+                  type: 'success',
+                  title: 'Achievement unlocked: MY PRECIOUS'
+                }).then(result =>TellTale())
+            } else if (value.match(/(Potter|Voldemort|Hagrid|Dumbledore|dumbledore|hagrid|voldemort|potter|Hermione|hermione)/)) {  
+                return Toast.fire({
+                  type: 'success',
+                  title: 'Achievement unlocked: YOU\'RE A WIZARD, HARRY!'
                 }).then(result =>TellTale())
               }},
         width: '700px',
