@@ -26,8 +26,18 @@ html{
 
 
 #swal2-title {
+  font-family: Spectral SC, serif;
+  font-size: 20px;
+} /*Sweetalert2 ID */
+
+#swal2-validation-message {
   font-family: Spectral SC, serif; 
-} /* Sweetalert2 ID */
+  font-size: 15px; 
+  font-weight: bold;
+  background: none;
+  color: black;
+} /*Sweetalert2 ID for validation message div */
+
 
 h1 {
   margin: 10px;
@@ -53,7 +63,7 @@ h4 {
 }
 
 p, #Tale {
-  width: 824px;
+  width: 822px;
   margin-left: 5px;
   margin-right: 5px;
   margin-top: 5px;
@@ -106,10 +116,10 @@ button {
   border: 2px solid rgb(28, 110, 164); 
   -webkit-transition-duration: 0.4s;
     transition-duration: 0.4s;
-    animation: fadein 15s;
-    -webkit-animation: fadein 15s; /* Safari, Chrome and Opera > 12.1 */
-    -moz-animation: fadein 15s; /* Firefox < 16 */
-    -ms-animation: fadein 15s; /* Internet Explorer */
+    animation: fadein 14s;
+    -webkit-animation: fadein 14s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 14s; /* Firefox < 16 */
+    -ms-animation: fadein 14s; /* Internet Explorer */
 }  
 
 #Start,button:hover {
