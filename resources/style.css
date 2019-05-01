@@ -128,6 +128,19 @@ button {
   transform: scale(1.1)
 }
 
+#musicbutton {
+  position: absolute;
+  top: 100px;
+  /* width: 100%; height: 100%; */
+  /* bottom: 4%; */
+  left: 240px;
+  /* filter: blur(5px);
+  animation: blur 0.5s; 
+  -webkit-animation: blur 0.5s;
+  -moz-animation: blur 0.5s;
+  -ms-animation: blur 0.5s;  */
+}
+
 /* #start,button:enabled {
   background: #144E75;
 } */
@@ -204,7 +217,7 @@ a, a:hover, a:active, a:visited {
   -ms-animation: deblur 0.5s; 
  } */
 
-#music {
+/* #music {
   display: block;
   height: 35px;
   width: 50px;
@@ -216,4 +229,4 @@ a, a:hover, a:active, a:visited {
   height: 35px;
   width: 300px;
   animation: unshrink 1s;
-}
+} */
