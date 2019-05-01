@@ -7,20 +7,23 @@
   <link rel="shortcut icon" type="image/png" href="resources/favicon.gif"/>
   <link rel="stylesheet" href="resources/style.css">
   <!--Link to sweetalert2 library-->
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8">
+  
+  </script>
 </head>
 
 <body>
-  <!--Important to place tale.js in the body-->
-    <script type="text/javascript" src="resources/tale.js"></script>
   <div>
   <h1>The story begins...</h1>
      <!-- Button that activates tale.js file -->
       <button id="start" onclick="TellTale()">Tell me a story</button>
          <p id="Tale"></p>  <!-- Result from tale.js will be put here as innerHTML-->
+         <button id="musicbutton" onclick="togglePlay()" type="button">►❚❚ </button>
         </div>
           <!-- Music by Danny Elfman and Russell Shaw OST Fable, (c) belongs to Microsoft -->
-  <span class="spoiler"><audio src="http://66.90.93.122/ost/fable-original-soundtrack/knivfmac/02.%20Oakvale.mp3" loop="true" controls id="music">
-    <p>If you are reading this, I am afraid your browser does not support the audio element.</p> </audio></span>
+          <audio id="music"> <source src="http://66.90.93.122/ost/fable-original-soundtrack/knivfmac/02.%20Oakvale.mp3"> If you are reading this - I'm afraid your browser doesn't suppor audio element </audio>
+            <!--Important to place tale.js after DOM elements-->
+            <script type="text/javascript" src="resources/tale.js"></script>
 </body>
+
 </html>
