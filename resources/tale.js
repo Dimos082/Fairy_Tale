@@ -6,15 +6,15 @@ function togglePlay() {
 
 // Welcoming alert suggesting user to turn the music on
 Swal.fire({
-  position: 'bottom',
+  position: 'top',
   showConfirmButton: false,
   timer: 6500,
-  title: 'Welcome, stranger! You can turn the music up here, in the left book corner. It will accompany you on your journey.',
+  title: 'Welcome, stranger! You can turn the music up here, in the left corner of this book. It will accompany you on your journey.',
   background: '#fff url(resources/background.jpg)',
   backdrop: `
     rgba(0,0,0,0.4)
     url("resources/stranger.gif")
-    bottom left
+    top left
     no-repeat
   `
 })
