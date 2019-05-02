@@ -1,15 +1,20 @@
+// Function to play/stop the music
 let music = document.getElementById("music");
-
 function togglePlay() {
   return music.paused ? music.play() : music.pause();
 };
+
+// Function to toggle Play/Pause button animations
+document.querySelector("#playButton").addEventListener("click", function() {
+  this.classList.toggle("paused");
+});
 
 // Welcoming alert suggesting user to turn the music on
 Swal.fire({
   position: 'top',
   showConfirmButton: false,
   timer: 6500,
-  title: 'Welcome, stranger! You can turn the music up here, in the left corner of this book. It will accompany you on your journey.',
+  title: 'Welcome, stranger! You can turn the music up here, in the left corner. It will accompany you on your journey.',
   background: '#fff url(resources/background.jpg)',
   backdrop: `
     rgba(0,0,0,0.4)
@@ -55,7 +60,7 @@ function TellTale() {
                     buttonsStyling: false,
                     imageAlt: 'ITS OVER 9000!',
                     animation: true,
-                    confirmButtonText: 'OK, I shall try not to write more than 9000 again'
+                    confirmButtonText: 'What 9000? There\'s no way that can be right'
                     //promise saves the current value and continues the function execution
                   }).then(result =>TellTale())
             } else if (value == 300) {  
