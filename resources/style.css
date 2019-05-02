@@ -122,24 +122,80 @@ button {
     -ms-animation: fadein 14s; /* Internet Explorer */
 }  
 
-#Start,button:hover {
+#Start, button:hover {
   background: #1C6EA4; 
   cursor:url(hand.png), auto;
   transform: scale(1.1)
 }
 
-#musicbutton {
+#playButton {
+  left: 16%;
+  top: -110px;
+  align-items: center;
+  justify-content: center;
+  /* This must match the background color behind the button */
+  color: white;
+  /* This is the color of the button */
+  background-color: black;
+  width: 40px; height: 40px;
+  position: relative;
+  overflow: hidden;
+  /* Draw the 2 pause bars */
+  background-image: linear-gradient(to right,
+  transparent 40%,currentColor 40%,currentColor 60%, transparent 0);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  cursor: url(hand.png), auto;
+  /* Hide the central part between the 2 bars */
+  transition: background-size .3s;
+}
+
+#playButton.paused {
+  background-size: 0 100%;
+}
+
+#playButton::before,
+#playButton::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: currentColor;
+  /* Before and after are skewed at 90deg to be invisible */
+  transform: skew(90deg);
+  transform-origin: top left;
+
+  /* And transitioned to the right angle to transform the square into a
+     triangle */
+  transition: transform .3s;
+}
+
+#playButton::after {
+  transform-origin: bottom left;
+}
+
+#playButton.paused::before {
+  transform: skew(64deg);
+}
+
+#playButton.paused::after {
+  transform: skew(117deg);
+}
+
+/* #musicButton {
   position: absolute;
   top: 100px;
-  /* width: 100%; height: 100%; */
-  /* bottom: 4%; */
-  left: 240px;
-  /* filter: blur(5px);
+  width: 100%; height: 100%;
+  bottom: 4%;
+  left: 300px;
+  filter: blur(5px);
   animation: blur 0.5s; 
   -webkit-animation: blur 0.5s;
   -moz-animation: blur 0.5s;
-  -ms-animation: blur 0.5s;  */
-}
+  -ms-animation: blur 0.5s;  
+} */
 
 /* #start,button:enabled {
   background: #144E75;
@@ -181,19 +237,22 @@ a, a:hover, a:active, a:visited {
   to   { filter: blur(0px); }
 } */
 
-@keyframes unshrink {
+/* @keyframes unshrink {
   from { width: 60px;
 }
-/* 10%{ width: 200px;} */
+10%{ width: 200px;}
   to  { width: 300px; }
 }
 
 @keyframes shrink {
   from { width: 300px;
 }
-/* 50%{ width: 200px;} */
+50%{ width: 200px;}
   to  { width: 60px; }
-}
+} */
+
+ /*A music toggler  */
+
    
 .spoiler {
   position: absolute;
