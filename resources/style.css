@@ -18,13 +18,6 @@ html{
   cursor:url(cursor.gif), none;
 }
 
-#zoomIn:active { 
-  zoom: 1.5; 
-  -moz-transform: scale(1.5); 
-  -moz-transform-origin: 0 0;
-} 
-
-
 #swal2-title {
   font-family: Spectral SC, serif;
   font-size: 20px;
@@ -38,6 +31,15 @@ html{
   color: black;
 } /*Sweetalert2 ID for validation message div */
 
+div {
+  /* display: grid; */
+  justify-items: center;
+  text-align: center;
+}
+
+.container {
+  display: grid;
+}
 
 h1 {
   margin: 10px;
@@ -63,7 +65,7 @@ h4 {
 }
 
 p, #Tale {
-  width: 822px;
+  width: 810px;
   margin-left: 5px;
   margin-right: 5px;
   margin-top: 5px;
@@ -80,10 +82,38 @@ p, #Tale {
   -ms-animation: fadein2 2.5s; /* Internet Explorer */
 }
 
-div {
-  display: grid;
-  justify-items: center;
-  text-align: center;
+@media screen and (max-width: 850px) {
+  p, #Tale {
+    width: 100%;
+    }
+  }
+
+@media screen and (max-width: 700px) {
+  body {
+  zoom: 0.7; 
+  -moz-transform: scale(0.7);
+  /* -moz-transform-origin: 0 0; */
+  background-size: 100%;
+  /* background-position: 0 -10px; */
+  /* -moz-background-size: 0.5; */
+  } 
+
+  p, #Tale {
+    padding-left: 3%;
+    width: 90%;
+    }
+}
+
+@media screen and (max-width: 650px) {
+  p, #Tale {
+    padding-right: 1%;
+    padding-left: 1%;
+    width: 94%;
+    }
+  body{
+    background-image: url("background1.jpg");
+    /* background-repeat: repeat-y; */
+    }
 }
 
 button {
@@ -116,10 +146,9 @@ button {
   border: 2px solid rgb(28, 110, 164); 
   -webkit-transition-duration: 0.4s;
     transition-duration: 0.4s;
+    -webkit-animation: fadein 14s;
     animation: fadein 14s;
-    -webkit-animation: fadein 14s; /* Safari, Chrome and Opera > 12.1 */
-    -moz-animation: fadein 14s; /* Firefox < 16 */
-    -ms-animation: fadein 14s; /* Internet Explorer */
+    
 }  
 
 #Start, button:hover {
@@ -129,6 +158,11 @@ button {
 }
 
 #playButton {
+  zoom: 0.5;
+  -moz-transform: scale(0.5);
+  position: absolute;
+  right: 70%;
+  /* bottom: 50%; */
   border: 0;
   background: transparent;
   box-sizing: border-box;
@@ -138,32 +172,16 @@ button {
   transition: 200ms all ease;
   cursor: url(hand.png), auto;
   border-style: solid;
-  border-width: 37px 0 37px 60px;
+  border-width: 37px 0px 37px 60px;
 }
 #playButton.paused {
   border-style: double;
-  border-width: 0px 0 0px 60px;
+  border-width: 0px 0px 0px 60px;
 }
 #playButton:hover {
-  border-color: transparent transparent transparent #404040;
+  transform: scale(1.2);
+  -moz-transform: scale(0.8);
 }
-
-/* #musicButton {
-  position: absolute;
-  top: 100px;
-  width: 100%; height: 100%;
-  bottom: 4%;
-  left: 300px;
-  filter: blur(5px);
-  animation: blur 0.5s; 
-  -webkit-animation: blur 0.5s;
-  -moz-animation: blur 0.5s;
-  -ms-animation: blur 0.5s;  
-} */
-
-/* #start,button:enabled {
-  background: #144E75;
-} */
 
 a, a:hover, a:active, a:visited {
   cursor: url(hand.png), auto;
@@ -199,57 +217,4 @@ a, a:hover, a:active, a:visited {
   from { filter: blur(5px); 
 }
   to   { filter: blur(0px); }
-} */
-
-/* @keyframes unshrink {
-  from { width: 60px;
-}
-10%{ width: 200px;}
-  to  { width: 300px; }
-}
-
-@keyframes shrink {
-  from { width: 300px;
-}
-50%{ width: 200px;}
-  to  { width: 60px; }
-} */
-
- /*A music toggler  */
-
-   
-.spoiler {
-  position: absolute;
-  top: 690px;
-  /* width: 100%; height: 100%; */
-  /* bottom: 4%; */
-  left: 48.5%;
-  /* filter: blur(5px);
-  animation: blur 0.5s; 
-  -webkit-animation: blur 0.5s;
-  -moz-animation: blur 0.5s;
-  -ms-animation: blur 0.5s;  */
-}
-
-/* .spoiler:hover { 
-  /* background-color:transparent;  */
-  /* filter: none;  */
-  /* animation: deblur 0.5s; 
-  -webkit-animation: deblur 0.5s;
-  -moz-animation: deblur 0.5s; 
-  -ms-animation: deblur 0.5s; 
- } */
-
-/* #music {
-  display: block;
-  height: 35px;
-  width: 50px;
-  animation: shrink 0.5s;
-}
-
-#music:hover {
-  display: block;
-  height: 35px;
-  width: 300px;
-  animation: unshrink 1s;
 } */
