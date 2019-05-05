@@ -129,59 +129,23 @@ button {
 }
 
 #playButton {
-  left: 16%;
-  top: -110px;
-  align-items: center;
-  justify-content: center;
-  /* This must match the background color behind the button */
-  color: white;
-  /* This is the color of the button */
-  background-color: black;
-  width: 40px; height: 40px;
-  position: relative;
-  overflow: hidden;
-  /* Draw the 2 pause bars */
-  background-image: linear-gradient(to right,
-  transparent 40%,currentColor 40%,currentColor 60%, transparent 0);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
+  border: 0;
+  background: transparent;
+  box-sizing: border-box;
+  width: 0;
+  height: 74px;
+  border-color: transparent transparent transparent #202020;
+  transition: 200ms all ease;
   cursor: url(hand.png), auto;
-  /* Hide the central part between the 2 bars */
-  transition: background-size .3s;
+  border-style: solid;
+  border-width: 37px 0 37px 60px;
 }
-
 #playButton.paused {
-  background-size: 0 100%;
+  border-style: double;
+  border-width: 0px 0 0px 60px;
 }
-
-#playButton::before,
-#playButton::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  background: currentColor;
-  /* Before and after are skewed at 90deg to be invisible */
-  transform: skew(90deg);
-  transform-origin: top left;
-
-  /* And transitioned to the right angle to transform the square into a
-     triangle */
-  transition: transform .3s;
-}
-
-#playButton::after {
-  transform-origin: bottom left;
-}
-
-#playButton.paused::before {
-  transform: skew(64deg);
-}
-
-#playButton.paused::after {
-  transform: skew(117deg);
+#playButton:hover {
+  border-color: transparent transparent transparent #404040;
 }
 
 /* #musicButton {
