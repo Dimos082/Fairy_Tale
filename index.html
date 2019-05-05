@@ -13,14 +13,15 @@
 </head>
 
 <body>
-    
+  <div id="playButton" onclick="togglePlay()"></div>
   <div>
   <h1>The story begins...</h1>
-     <!-- Button that activates tale.js file -->
+     <!-- This button activates tale function-->
       <button id="start" onclick="TellTale()">Tell me a story</button>
-         <p id="Tale"></p>  <!-- Result from tale.js will be put here as innerHTML-->
+      <div class="container">  
+      <p id="Tale"></p>  <!-- Result from tale.js will be put here as innerHTML-->
+      </div>
         </div>
-        <div id="playButton" onclick="togglePlay()"></div>
           <!-- Music by Danny Elfman and Russell Shaw OST Fable, (c) belongs to Microsoft -->
           <audio id="music"> <source src="http://66.90.93.122/ost/fable-original-soundtrack/knivfmac/02.%20Oakvale.mp3"> If you are reading this - I'm afraid your browser doesn't suppor audio element </audio>
             <!--Important to place tale.js after DOM elements-->
