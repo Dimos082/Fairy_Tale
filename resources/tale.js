@@ -54,7 +54,7 @@ function TellTale() {
               //an easter egg when user input exceeds 9000
             } else if (value>9000) {  
                 return Swal.fire({
-                    imageUrl: 'https://i.imgur.com/psA9jHo.gif?noredirect',
+                    imageUrl: 'https://i.imgur.com/psA9jHo.gif',
                     imageWidth: 500,
                     imageHeight: 261,
                     buttonsStyling: false,
