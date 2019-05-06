@@ -98,6 +98,11 @@ function TellTale() {
                   type: 'success',
                   title: 'Achievement unlocked: YOU\'RE A WIZARD, HARRY!'
                 }).then(result =>TellTale())
+            } else if (value.match(/(Limmy|limmy)/)) {  
+                return Toast.fire({
+                  type: 'success',
+                  title: 'Achievement unlocked: STEEL IS HEAVIER THAN FEATHERS!'
+                }).then(result =>TellTale())
               }},
         width: '700px',
         progressStepsDistance: '1 px',
@@ -123,7 +128,7 @@ function TellTale() {
         {title: 'Tell me the place where that mean character lives'}, //result.value[4]
         {title: 'Tell me a name of a wiseman'}, //result.value[5]
         {title: 'A name of the most elegant weapon'}, //result.value[6]
-        {title: 'How many days needed to defeat all enemies?',
+        {title: 'How many days needed to fought all enemies?',
         input: 'range',
         inputAttributes: {
           min: 0,
