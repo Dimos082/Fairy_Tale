@@ -1,5 +1,6 @@
 // Function to play/stop the music
 let music = document.getElementById("music");
+document.getElementById("music").loop = true;
 function togglePlay() {
   return music.paused ? music.play() : music.pause();
 };
